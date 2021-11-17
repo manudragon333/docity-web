@@ -1,0 +1,13 @@
+@import './../../app/theme/variable.scss';
+.center {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: $green-color;
+    font-size: $font-26;
+    font-family: sans-serif;
+}
+:host ::ng-deep .ngx-pagination .current{
+    background: #8bbdc5 !important;
+    border-radius: 100% !important;
+  }

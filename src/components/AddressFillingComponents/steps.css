@@ -1,0 +1,127 @@
+.steps img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border-image: linear-gradient(#c7dfe3) 4;
+}
+
+.step-border {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: #c7dfe3 4px solid;
+  position: absolute;
+  top: 0px;
+  z-index: 9;
+}
+
+.steps {
+  background-color: #76b3bd !important;
+  position: relative;
+  margin-top: 5rem;
+  padding: 0 !important;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.step label {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+}
+
+.step label {
+  width: 80% !important;
+  word-wrap: break-word;
+}
+
+label.active {
+  font-weight: 600;
+  color: #fff;
+}
+
+.active .step-line::after {
+  background-color: #fff;
+}
+
+/* Map section */
+
+.map-sec {
+  width: 50%;
+  height: 30rem;
+}
+
+.map-header {
+  padding: 1rem 2rem;
+}
+
+.main-head {
+  font-weight: 600;
+  padding: 2px;
+  color: #4f5461;
+}
+
+.sub-head {
+  font-weight: 400;
+  padding: 2px;
+  color: #d2d2d2;
+}
+
+.locateMe img {
+  margin: 5px;
+  margin-top: 8px;
+}
+
+.address-filling-form .input-wrap {
+  width: 100%;
+}
+
+.address-filling-form .button-wrap {
+  width: 90%;
+  text-align: center;
+}
+
+.address-filling-form {
+  width: 90%;
+  margin: auto;
+}
+
+@media (max-width: 600px) {
+  .mobile-map-addressform {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .map-instructions {
+    display: none;
+  }
+
+  .map-sec {
+    display: block;
+  }
+
+  .address-form-mobile {
+    margin-top: 8rem !important;
+  }
+
+  .step label {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 320px) {
+  .step label {
+    width: 100% !important;
+    word-wrap: break-word;
+  }
+}

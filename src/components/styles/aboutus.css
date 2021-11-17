@@ -1,0 +1,183 @@
+/* .verifyProperty:hover {
+  color: #76b3bd;
+  border-bottom: 3px solid #76b3bd;
+  border-radius: 0px !important;
+} */
+
+.verifyProperty {
+  padding: 0 1rem;
+  color: #323943;
+  text-transform: none;
+  border-radius: 0px;
+  font-size: 1rem;
+  /* border-bottom: 3px solid white; */
+  border-bottom: 1px solid #8bbdc5;
+  color: #8bbdc5;
+}
+
+.abtUsAns {
+  /* color: #4f5461; */
+  color: #000;
+  font-weight: 500;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+/* Contact us styles */
+
+.grid-item-one {
+  grid-area: grid-item1;
+}
+
+.grid-item-two {
+  grid-area: grid-item2;
+}
+.grid-wrap-item {
+  display: grid;
+  grid-gap: 1rem;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "grid-item1  grid-item2";
+}
+.one {
+  grid-area: grid-wrap-item-one;
+}
+
+.two {
+  grid-area: grid-wrap-item-two;
+}
+
+.three {
+  grid-area: grid-wrap-item-three;
+}
+.grid-wrap-textarea textarea {
+  resize: none;
+  padding: 0.5rem;
+  width: 99%;
+  border: none;
+  border-bottom: 1px solid #aaaaaf;
+  font-size: 1rem;
+}
+.grid-wrap-textarea {
+  /* display: grid; */
+  grid-gap: 1rem;
+  grid-area: grid-wrap-textarea;
+  grid-template-areas: "grid-item1 grid-item1";
+  width: 100%;
+}
+
+.contactGrid {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-areas:
+    "grid-wrap-item-one"
+    "grid-wrap-item-two"
+    "grid-wrap-item-three"
+    "grid-wrap-textarea";
+}
+
+.contactGrid input {
+  height: 2.5rem;
+  padding: 1rem 0.5rem;
+  width: 95%;
+  border: none;
+  border-bottom: 1px solid #aaaaaf;
+  font-size: 1rem;
+}
+
+.contactGrid input:focus,
+select:focus,
+.contactGrid textarea:focus {
+  border-bottom: 1px solid #4f5461;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: 0;
+}
+
+.contactGrid .select-sec,
+.contactGrid .css-g1d714-ValueContainer {
+  height: 2.5rem;
+}
+
+.select-sec {
+  width: 95%;
+}
+
+.contactGrid input::placeholder,
+.contactGrid textarea::placeholder {
+  color: #aaaaaf;
+  font-weight: 500;
+}
+
+.contactGrid .css-1wa3eu0-placeholder {
+  margin-top: 0.25rem;
+  color: #aaaaaf !important;
+  font-weight: 400 !important;
+  font-size: 1rem;
+}
+
+.contactGrid .css-yk16xz-control {
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #aaaaaf !important;
+  /* outline: none; */
+}
+
+.contactGrid .css-1pahdxg-control {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #aaaaaf !important;
+}
+
+.contactGrid .css-1okebmr-indicatorSeparator {
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .css-yk16xz-control {
+    min-height: 25px !important;
+  }
+  .css-tlfecz-indicatorContainer {
+    padding: 0 !important;
+  }
+
+  .contactGrid .select-sec,
+  .contactGrid .css-g1d714-ValueContainer {
+    height: 2.5rem;
+    /* margin-top: 8px; */
+  }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .contactGrid .select-sec,
+  .contactGrid .css-g1d714-ValueContainer {
+    height: 2.5rem;
+    margin-top: 7px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 600px) {
+  .contactGrid .select-sec,
+  .contactGrid .css-g1d714-ValueContainer {
+    height: 2.5rem;
+    /* margin-top: 5px; */
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .contactGrid .select-sec,
+  .contactGrid .css-g1d714-ValueContainer {
+    height: 2.5rem;
+    /* margin-top: 5px; */
+  }
+}
+
+@media (min-width: 1100px) {
+  .contactGrid .select-sec,
+  .contactGrid .css-g1d714-ValueContainer {
+    height: 2.5rem;
+    /* margin-top: 10px; */
+  }
+}

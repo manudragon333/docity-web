@@ -1,0 +1,244 @@
+.camDiv {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.elv-card item1 {
+  width: 100%;
+  height: 99%;
+}
+
+.logout_item {
+  display: flex;
+  border: 0;
+}
+
+.logout-icon {
+  height: 20px !important;
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+  .camDiv {
+    /* width: 2.5rem;
+    height: 2.5rem; */
+  }
+}
+
+.progressBar svg {
+  width: 12rem;
+  height: 12rem;
+}
+
+.progressBar{
+  width: auto !important;
+}
+
+img.profile {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profilepic {
+  padding: 1.5rem 3rem;
+}
+
+.indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 2.2em;
+  font-weight: 100;
+  color: #49c5b6;
+  font-weight: 500;
+  user-select: none;
+}
+
+.profileSummary div span,
+.civil-summary div span {
+  padding: 0.2rem;
+  display: inline-block;
+}
+
+.profileSummary div span:first-child,
+.civil-summary div span:first-child {
+  color: #9898a6;
+  font-weight: 500;
+}
+
+.profileSummary div span:last-child,
+.civil-summary div span:last-child {
+  color: #797e85;
+  font-weight: 500;
+}
+
+.approved-green {
+  color: #5cad04 !important;
+}
+
+.basicDetails span {
+  display: block !important;
+  text-align: left;
+}
+
+.lastSec {
+  padding-bottom: 0.4rem;
+}
+
+.eduBorder {
+  border: 1px solid #ebebeb;
+}
+
+.sec3 img {
+  width: 12rem;
+  height: 15rem;
+}
+
+.prosec-space{
+  margin: 0.5rem !important;
+  column-gap: 0.5rem;
+  margin-right: 0;
+}
+
+.user-prosec-space{
+  margin: 0.5rem !important;
+  column-gap: 0.5rem;
+  margin-right: 0;
+}
+
+.user-prosec-space img{
+  width: 100%;
+  height: 100% !important;
+  object-fit: contain;
+}
+
+.proSec3 img {
+  /* min-width: 10rem;
+  min-height: 13rem; */
+  width: 100%;
+  height: 14.7rem;
+  object-fit: contain;
+}
+
+.changeId {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: 13rem;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.changeId button {
+  background-color: #a2a2a1;
+  border-radius: 4px;
+  width: 80%;
+  font-size: 1rem;
+  padding: 1rem 0.5rem;
+  text-transform: none;
+}
+
+/* with grid css */
+
+.pic-sec {
+  grid-area: picsec;
+}
+
+.basicDetails {
+  grid-area: basicdetails;
+}
+
+.widthDetails{
+  width: auto;
+}
+
+.item1 {
+  grid-area: item1;
+}
+
+.item2 {
+  grid-area: item2;
+}
+
+.item3 {
+  grid-area: item3;
+}
+
+.sec3 {
+  grid-area: sec3;
+  display: grid;
+  grid-template-areas: "item1 item2 item3";
+  grid-template-columns: 25rem auto auto;
+  column-gap: 10px;
+}
+
+.civil-sec3 {
+  grid-area: sec3;
+  display: grid;
+  grid-template-areas: "item1 item2 item3";
+  grid-template-columns: 18rem 22rem auto;
+  column-gap: 10px;
+}
+
+/* .sec3 .item2,
+.sec3 .item3,
+.civil-sec3 .item2,
+.civil-sec3 .item3 {
+  margin-left: 1rem;
+} */
+
+.profileSummary {
+  display: grid;
+  grid-template-areas: "item1 item2 item3";
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.profileSummary .item1,
+.profileSummary .item2,
+.profileSummary .item3 {
+  width: 15rem;
+}
+
+.psEdit .item1,
+.psEdit .item2,
+.psEdit .item3 {
+  margin-left: 0;
+}
+
+.details-sec {
+  grid-area: details;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-areas:
+    "picsec details"
+    "picsec sec3";
+  grid-template-columns: 22% 78%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+  .civil-sec3 {
+    grid-area: sec3;
+    display: grid;
+    grid-template-areas: "item1 item2 item3";
+    grid-template-columns: 18rem 18rem auto;
+    grid-column-gap: 10px;
+    column-gap: 10px;
+  }
+}

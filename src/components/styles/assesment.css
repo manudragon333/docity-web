@@ -1,0 +1,45 @@
+.options li {
+  margin: 1rem 0;
+}
+
+.options li span {
+  font-weight: 500;
+  color: #61656d;
+  margin-left: 0.5rem;
+}
+
+.radio:checked ~ .opt {
+  font-weight: 700;
+  color: #272d3d;
+}
+
+.opt:hover {
+  cursor: pointer;
+}
+
+.ques {
+  margin: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.assesment-next img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.assesment-btns {
+  position: absolute;
+  bottom: -5rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.assesment-btns button:first-child {
+  background-color: #757588;
+  margin-right: 2rem;
+}
+
+.assesment-btns button:last-child {
+  background-color: var(--primary-one);
+}

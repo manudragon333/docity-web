@@ -1,0 +1,63 @@
+.ackHead {
+  margin-bottom: 4rem;
+}
+
+.ackHead img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.ackHead span {
+  color: #94c2c9;
+  font-weight: 500;
+  margin-left: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.illustration {
+  width: 30rem;
+  height: 20rem;
+}
+
+.illustration img {
+  width: inherit;
+  height: inherit;
+}
+
+.summaryDetails {
+  background-color: #fafafa;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.propertyAddress {
+  background-color: #fafafa;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.summaryDetails div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summaryDetails div span {
+  padding: 0.2rem;
+}
+
+.summaryDetails div span:first-child {
+  color: #aaaaaf;
+  font-weight: 500;
+}
+
+.summaryDetails div span:last-child {
+  color: #7ca9b0;
+  font-weight: 500;
+}
+
+.ackMapSec {
+  width: 100%;
+  height: 12rem;
+}

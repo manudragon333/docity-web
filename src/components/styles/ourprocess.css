@@ -1,0 +1,115 @@
+.our-process {
+  margin-top: 4rem;
+}
+
+.titleSec h1 {
+  color: #323943;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.titleSec p {
+  text-align: center;
+  color: #4f5461;
+}
+
+.nextBg {
+  background-color: #242a3a;
+  min-width: 22rem;
+  width: 22rem;
+  height: 17rem;
+}
+
+.cardSec {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.nextBtns,
+.nums {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nums {
+  margin-top: 1rem;
+}
+.nextBtns img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.nums span {
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+  opacity: 0.3;
+}
+
+.nums span.active {
+  color: #76b3bd;
+  opacity: 1;
+}
+
+.nextLine {
+  width: 80%;
+  margin: 1rem auto;
+  display: flex;
+}
+
+.nextLine div {
+  width: 100%;
+  background-color: white;
+  opacity: 0.3;
+  height: 3px;
+}
+
+.nextLine div.active {
+  background-color: #76b3bd;
+  opacity: 1;
+}
+
+.processCard {
+  padding: 1rem;
+  margin-right: 1.5rem;
+  text-align: center;
+  max-width: 20rem;
+  min-width: 20rem;
+}
+
+.processActiveCard {
+  background-color: #242a3a;
+}
+
+.processCard img {
+  width: 15rem;
+  margin-top: 2rem;
+}
+
+.processCard .notes {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.processCard button {
+  text-transform: none;
+  font-size: 1rem;
+}
+
+.processCard h4 {
+  margin: 2rem 0;
+}
+
+.processActiveCard h4 {
+  color: #fff !important;
+}
+.cardMobileSection{
+  display: none;
+}
+.cardSecMobile{
+  display: none;
+}

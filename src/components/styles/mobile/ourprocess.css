@@ -1,0 +1,75 @@
+@media (min-width: 320px) and (max-width: 480px) {
+  .processCard {
+    min-width: 100%;
+    /* margin: 0 5%; */
+}
+
+  .titleSec h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .titleSec p {
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .our-process .nextBg .mt3 {
+    margin-top: 1rem !important;
+  }
+
+  .our-process{
+    padding: 5%;
+    background-color: #242b3a;
+    margin-top: 0;
+  }
+
+  .processActiveCard{
+    background-color: #ffffff;
+  }
+
+  .nextBg {
+    background-color: #242a3a;
+    min-width: 9rem;
+    width: 13rem;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .cardSec {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: none;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  .cardMobileSection{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .cardSecMobile{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nextBtns img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .nums span {
+    font-size: 1.5rem;
+  }
+
+  .processCard img {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+}

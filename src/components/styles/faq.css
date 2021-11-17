@@ -1,0 +1,48 @@
+ul {
+  list-style: none;
+}
+
+.link {
+  display: block;
+  color: #424952;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ans-link {
+  display: block;
+  color: #424952;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  /* cursor: pointer; */
+}
+
+.active {
+  color: #d97d55;
+}
+
+.ans {
+  margin-right: 5rem;
+  display: none;
+}
+
+.active ~ .ans {
+  display: block;
+}
+
+.backTop {
+  display: block;
+  margin-top: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .faq-image-section {
+    display: none;
+  }
+}

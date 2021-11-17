@@ -1,0 +1,28 @@
+.video-sec {
+  width: 75%;
+}
+.video-sec video {
+  width: 100%;
+}
+
+.video-instructions p {
+  margin: 1rem 0;
+  color: #313746;
+  font-weight: 500;
+}
+
+.video-instructions {
+  width: 25%;
+}
+
+.assessment-completed {
+  background: #d97d55;
+  color: #fff;
+  padding: 0.7rem 2.5rem;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}

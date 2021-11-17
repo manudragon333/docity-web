@@ -1,0 +1,21 @@
+.benefits {
+  margin: 2rem;
+}
+
+.benefits h3 {
+  color: #414852;
+}
+
+.benefits ul li {
+  margin-top: 1rem;
+  color: #818193;
+}
+
+.benefits button {
+  margin-top: 3rem;
+}
+
+.landing-aboutus {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+}

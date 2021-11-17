@@ -1,0 +1,12 @@
+@media (min-width: 320px) and (max-width: 480px) {
+  .video-sec {
+    width: 100%;
+  }
+  .video-sec video {
+    width: 100%;
+  }
+
+  .video-instructions {
+    width: 100%;
+  }
+}

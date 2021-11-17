@@ -1,0 +1,154 @@
+.uploadDocs {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.doc-thumbnails img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.doc-thumbnails .first {
+  position: relative;
+  left: 1.5rem;
+  z-index: 10;
+}
+
+.doc-thumbnails .second {
+  position: relative;
+  z-index: 8;
+}
+
+.doc-thumbnails .step-border-first {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: #b8d8dd 2px solid;
+  position: absolute;
+  left: 1.5rem;
+  z-index: 11;
+}
+
+.doc-thumbnails .step-border-second {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: #b8d8dd 2px solid;
+  position: absolute;
+  z-index: 9;
+}
+
+.doc-thumbnails {
+  /* margin: 0.5rem 1rem; */
+}
+
+.doc-thumbnails .step-border-last {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: #b8d8dd 2px solid;
+  position: absolute;
+  right: 1.5rem;
+  z-index: 7;
+}
+
+.doc-thumbnails .last {
+  position: relative;
+  right: 1.5rem;
+  z-index: 6;
+}
+
+.doc-thumbnails .border {
+  border: #c7dfe3 4px solid;
+}
+
+.text-sec span {
+  font-weight: 500;
+  padding: 3px;
+  margin-left: 1rem;
+}
+
+.fileStyle {
+  height: 35px;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  width: 12rem;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.fileStyle img {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  padding-left: 5px;
+  border-left: 1px solid #bababa;
+}
+
+.fileStyle span {
+  vertical-align: middle;
+  padding-left: 8px;
+  display: inline-block;
+  width: 10rem;
+  font-weight: 500;
+}
+
+.fileWrap {
+  margin: 0.5rem 1rem;
+}
+
+.count {
+  margin-right: 5px;
+  font-weight: 500;
+  width: 4rem;
+  margin-top: -1.5rem;
+}
+
+.note {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #4f5461;
+}
+
+/* .up-ml4 {
+  margin-left: 4.2rem;
+} */
+
+.uploadFileSec {
+  background-color: #f1f2f1;
+  padding-top: 1rem;
+  height: inherit;
+  padding-bottom: 1rem;
+}
+
+.addNotes .para {
+  /* background-color: #fff; */
+  /* padding: 0.5rem; */
+  margin-top: 0.5rem;
+  width: 100%;
+  position: relative;
+}
+
+.abs-notes-spinner {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+}
+
+.fileWrap > div {
+  margin-bottom: 0.7rem;
+}
+
+.instructions {
+  /* overflow-y: scroll; */
+  height: 18rem;
+}

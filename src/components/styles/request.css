@@ -1,0 +1,73 @@
+.requests .maps {
+  height: 14rem;
+}
+
+.requests .address {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #4f5461;
+}
+.requests .address h4 {
+  font-size: 1rem;
+}
+.requests .address div {
+  margin-top: 0.5rem;
+}
+
+.ce-img {
+  margin: 1.5rem 0;
+}
+
+.ce-img img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ce-bg {
+  background-color: #e8e8e8;
+}
+
+.ce-left {
+  color: #8a8a96;
+  font-weight: 500;
+  margin: 0.3rem 0;
+  width: 8rem;
+  display: inline-block;
+}
+
+.ce-right {
+  color: #464b5c;
+  font-weight: 500;
+  margin: 0.3rem 0;
+  width: 8rem;
+  display: inline-block;
+}
+
+.request-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 2rem;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .request-grid {
+    grid-template-columns: auto;
+    width: 80%;
+    margin: auto;
+  }
+  .elv-card{
+    border: 1px solid #e8e8e8;
+  }
+  .inviteCE{
+    top: 5.5rem;
+    right: 0rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .request-grid {
+    grid-template-columns: auto auto auto;
+  }
+}

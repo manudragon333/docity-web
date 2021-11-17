@@ -1,0 +1,38 @@
+@media (min-width: 320px) and (max-width: 480px) {
+  .d-flex {
+    flex-direction: column;
+  }
+
+  .mobile-dflex{
+    flex-direction: row;
+  }
+  
+  .container {
+    margin: 0 2rem;
+  }
+
+  .partnerImgs {
+    flex-direction: column;
+  }
+
+  .team img {
+    width: 25rem;
+    height: 20rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 568px) {
+  .d-flex {
+    flex-direction: column;
+  }
+
+  .container {
+    margin: 0 3rem;
+  }
+}
+
+@media (min-width: 569px) and (max-width: 800px) {
+  html {
+    font-size: 10px;
+  }
+}

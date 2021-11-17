@@ -1,0 +1,62 @@
+.amt-desc span:first-child {
+  font-weight: 500;
+  color: #303645;
+}
+
+.amt-desc span:last-child {
+  font-weight: 700;
+  color: #363b4a;
+  margin-left: 1rem;
+}
+
+.pay-btn-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.paynow {
+  background-color: #68b928;
+  padding: 0.8rem 3rem;
+  border-radius: 0;
+  margin-top: 1rem;
+}
+
+.pay-types {
+  background-color: #fafafa;
+  padding: 1rem 0;
+}
+
+.pay-types li {
+  padding: 0.7rem;
+  padding-left: 1rem;
+  padding-right: 6rem;
+  color: #303645;
+  font-weight: 600;
+  text-align: left;
+}
+
+.pay-types li.active {
+  background-color: #eef3f4;
+  color: #76b3bd;
+}
+
+.expiry-cvv .select-wrap {
+  width: 6rem;
+}
+
+.netbanking {
+  width: 32.5rem;
+  padding: 0 1.5rem;
+}
+
+.validate-upi {
+  border: 1px solid #68b928;
+  border-radius: 0;
+  color: #68b928;
+}
+
+.credit-card {
+  padding: 0 1.5rem;
+}
