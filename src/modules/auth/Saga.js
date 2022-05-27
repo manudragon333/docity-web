@@ -58,12 +58,12 @@ export function uploadProfilePic(req) {
   )();
 }
 
-export function getProfile() {
-  return sagaFunctions(GetProfileActionTypes, "get", apis.profile)();
+export function getProfile(req) {
+  return sagaFunctions(GetProfileActionTypes, "get", apis.profile, req)();
 }
 
 export function updateProfile(req) {
-  console.log(req)
+  console.log(req);
   return sagaFunctions(
     UpdateProfileActionTypes,
     "put",
@@ -147,7 +147,8 @@ export function* getProfileWatcher() {
 export function* updateProfileWatcher() {
   yield takeLatest(UpdateProfileActionTypes.REQUEST, updateProfile);
 }
-export function* profilePicWatcher() {
+export function* profilePicWatcher(action) {
+  console.log("Saga , action", action);
   yield takeLatest(UploadProfilePicActionTypes.REQUEST, uploadProfilePic);
 }
 

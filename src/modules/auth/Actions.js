@@ -94,9 +94,13 @@ export const uploadProfilePicReset = () => ({
   type: UploadProfilePicActionTypes.RESET,
 });
 
-export const getProfile = () => ({
-  type: GetProfileActionTypes.REQUEST,
-});
+export const getProfile = (profileId) => {
+  console.log("getProfile profileId >>>>>>", profileId);
+  return {
+    type: GetProfileActionTypes.REQUEST,
+    profileId,
+  };
+};
 
 export const verifyToken = (token) => ({
   type: VerifyTokenActionTypes.REQUEST,

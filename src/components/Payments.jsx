@@ -15,6 +15,7 @@ import { alertOpen } from "../modules/common";
 import AlertComponent from "./AlertComponent";
 
 export const RAZOR_PAY_KEY = "rzp_test_lKF18lyqfUNm1V";
+// export const RAZOR_PAY_KEY = "rzp_live_OIDsQq6NJW0DNC";
 
 const CreditCardSchema = Yup.object().shape({
   name: Yup.string()

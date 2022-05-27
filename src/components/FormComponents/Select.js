@@ -4,7 +4,7 @@ const SelectComponent = ({ formik, ...props }) => {
   const initClass = {
     propertyType: false,
     region: false,
-    queryTypes: false
+    queryTypes: false,
   };
 
   useEffect(() => {
@@ -43,8 +43,14 @@ const SelectComponent = ({ formik, ...props }) => {
             if (formik) {
               if (props.isSetVal) {
                 formik?.setFieldValue(props.name, e.value);
+                if (props.onChange) {
+                  props.onChange(e.value);
+                }
               } else {
                 formik?.setFieldValue(props.name, e);
+                if (props.onChange) {
+                  props.onChange(e);
+                }
               }
             } else {
               props.onChange(e);

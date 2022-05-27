@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 // import Logo from "../assets/images/white_docity.svg";
 // import LogOut from "../assets/images/log-out-white.svg";
-import Phone from "../assets/images/phone.svg";
+import Phone from "../assets/images/whatsapp_icon.png";
 
 import Popup from "reactjs-popup";
 import Login from "./Login";
@@ -361,8 +361,8 @@ const NavBar = (props) => {
         </div>
         <ul className="user-phone">
           <li>
-            <img src={Phone} alt="Phone" className="phone" />
-            <span className="phone-text">+09 876-5431221</span>
+            <img src={Phone} alt="Phone" className="phone" style={{maxWidth:"28px"}} />
+            <span className="phone-text">+91 78934-12266</span>
           </li>
           {login ? (
             <>

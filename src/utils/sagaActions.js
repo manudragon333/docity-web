@@ -10,7 +10,7 @@ export const sagaFunctions = (action_type, method, api, data, headers) => {
           headers,
         });
       } else {
-        res = yield call(endpoint[method], api);
+        res = yield call(endpoint[method], api, data && { params: data }); // { params: data }
       }
       if (res.status === 200 || res.status === 201) {
         yield put({

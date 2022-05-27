@@ -196,6 +196,14 @@ const Requests = (props) => {
                           {STATUS_LIST?.[item?.assessmentStatus]?.name}
                         </span>
                       </div>
+                      <div>
+                        <span className="ce-right">
+                          <button className="primary-color m1" onClick={()=>{
+                            props.resetProperty();
+                            history.push("/civilEnggProfileEdit/"+item?.id);
+                          }}>Edit</button>
+                        </span>
+                      </div>
                     </div>
                   </div>
                 ))

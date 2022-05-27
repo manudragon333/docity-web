@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { useHistory, useLocation, useParams } from "react-router-dom";
 import { bindActionCreators } from "redux";
 import { alertOpen, getPropertyTypes, getRegions } from "../../modules/common";
+import { getCivilEngg } from "../../modules/civil-engg";
 import { Input } from "../FormComponents/Input";
 import Select from "../FormComponents/Select";
 import {
@@ -57,6 +58,12 @@ const AddressForm = (props) => {
             value: props?.property?.region?.id,
           }
         : "" || "",
+      civilEngineers: props?.property?.civilEngineers
+        ? {
+            label: props?.property?.civilEngineers?.name,
+            value: props?.property?.civilEngineers?.id,
+          }
+        : "" || "",
       latitude: props?.property?.latitude || "",
       longitude: props?.property?.longitude || "",
     },
@@ -76,6 +83,9 @@ const AddressForm = (props) => {
       vals.region = {
         id: values.region.value,
       };
+      vals.civilEngineers = {
+        id: values.civilEngineers.value,
+      };
       if (params.id) {
         vals.propertyRequestId = params.id;
         props.updateVerifyProperty(vals);
@@ -91,8 +101,13 @@ const AddressForm = (props) => {
     props.setFormik(formik);
     props.getPropertyTypes();
     props.getRegions();
+    // props.getCivilEngg({region:formik?.values?.region});
     // eslint-disable-next-line
   }, []);
+
+  useEffect(() => {
+    props.getCivilEngg({region:formik?.values?.region?.value});
+  }, [formik?.values?.region]);
 
   useEffect(() => {
     if (params.id) {
@@ -178,6 +193,22 @@ const AddressForm = (props) => {
           defaultValue={formik?.values?.region}
           className="w100"
         />
+        <Select
+          label={"Civil Engineer"}
+          name={"civilEngineers"}
+          options={
+            props?.civilEngineers
+              ? props?.civilEngineers?.map((item) => ({
+                  label: item.displayName,
+                  value: item.id,
+                }))
+              : []
+          }
+          // defaultValue={formik?.values?.region}
+          formik={formik}
+          required={true}
+          placeholder="Select..."
+        />
         <Input
           name="city"
           label={"City"}
@@ -232,6 +263,7 @@ const mapStateToProps = (state) => {
     regions: state?.common?.regions?.array,
     verifyProperty: state?.propertyContact?.verifyProperty,
     property: state?.propertyContact?.property,
+    civilEngineers: state?.civilEng?.civilEngg?.array
   };
 };
 const mapDispatchToProps = (dispatch) => {
@@ -249,6 +281,7 @@ const mapDispatchToProps = (dispatch) => {
           type: FetchPropertyActionTypes.RESET,
         };
       },
+      getCivilEngg,
     },
     dispatch
   );

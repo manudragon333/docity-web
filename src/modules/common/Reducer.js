@@ -2,6 +2,7 @@ import {
   AlertActionTypes,
   PropertyActionTypes,
   RegionActionTypes,
+  CivilEnggActionTypes,
   ContactUsActionTypes,
   QueryTypesActionTypes,
 } from "./ActionTypes";
@@ -10,6 +11,7 @@ const InitialState = {
   alert: {},
   propertyTypes: {},
   regions: {},
+  civilEngg: {},
   postContactUs: {},
   queryTypes: {},
 };

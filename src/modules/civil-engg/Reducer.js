@@ -6,6 +6,7 @@ import {
   FetchCEActionTypes,
   CEPropertyActionActionTypes,
   SubmitAssessmentActionTypes,
+  CivilEnggActionTypes,
 } from "./ActionTypes";
 
 const InitialState = {
@@ -167,6 +168,31 @@ export const CivilEngReducer = (state = InitialState, action) => {
       return {
         ...state,
         inviteCE: { loading: false },
+      };
+    }
+
+    case CivilEnggActionTypes.REQUEST:
+      return {
+        ...state,
+        civilEngg: { loading: true },
+      };
+    case CivilEnggActionTypes.SUCCESS:
+      return {
+        ...state,
+        civilEngg: {
+          array: action.payload,
+          loading: false,
+        },
+      };
+    case CivilEnggActionTypes.FAILED: {
+      let payload = action?.payload?.response?.data?.errors?.[0];
+      return {
+        ...state,
+        civilEngg: {
+          ...action.payload,
+          errors: { ...payload },
+          loading: false,
+        },
       };
     }
 

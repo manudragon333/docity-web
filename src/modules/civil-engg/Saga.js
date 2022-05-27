@@ -8,6 +8,7 @@ import {
   FetchCEActionTypes,
   CEPropertyActionActionTypes,
   SubmitAssessmentActionTypes,
+  CivilEnggActionTypes,
 } from "./ActionTypes";
 
 export function assignCEReq(req) {
@@ -56,6 +57,18 @@ export function cePropertyActionReq(req) {
   )();
 }
 
+export function getCivilEngg({ filters }) {
+  let queryStr = "?status=1";
+  if (filters?.region) {
+    queryStr = queryStr + "&region=" + filters.region;
+  }
+  return sagaFunctions(
+    CivilEnggActionTypes,
+    "get",
+    apis.civilEnggList + queryStr
+  )();
+}
+
 export function* assignCEWatcher() {
   yield takeLatest(AssignCEActionTypes.REQUEST, assignCEReq);
 }
@@ -80,6 +93,10 @@ export function* cePropertyActionWatcher() {
   yield takeLatest(CEPropertyActionActionTypes.REQUEST, cePropertyActionReq);
 }
 
+export function* getCivilEnggWatcher() {
+  yield takeLatest(CivilEnggActionTypes.REQUEST, getCivilEngg);
+}
+
 export function* civilEnggSaga() {
   yield all([
     assignCEWatcher(),
@@ -88,5 +105,6 @@ export function* civilEnggSaga() {
     cePropertyActionWatcher(),
     inviteCEWatcher(),
     submitAssessmentWatcher(),
+    getCivilEnggWatcher(),
   ]);
 }

@@ -6,7 +6,8 @@ import { useHistory, useLocation } from "react-router-dom";
 import Popup from "reactjs-popup";
 // import Logo from "../assets/images/blue_docity.svg";
 // import LogoutIcon from "../assets/images/log-out1.svg";
-import Phone from "../assets/images/dark_phone.svg";
+// import Phone from "../assets/images/dark_phone.svg";
+import Phone from "../assets/images/whatsapp_icon.png";
 import DownArrow from "../assets/images/down_arrow.svg";
 // import LogOut from "../assets/images/log-out.svg";
 import Profile from "../assets/images/user.svg";
@@ -259,8 +260,8 @@ const NavBar = (props) => {
         </div>
         <ul className="user-phone">
           <li>
-            <img src={Phone} alt="Phone" className="phone" />
-            <span className="phone-text">+09 876-5431221</span>
+            <img src={Phone} alt="Phone" className="phone" style={{maxWidth:"20px"}} />
+            <span className="phone-text">+91 78934-12266</span>
           </li>
           <li
             className="flex-center cursor mobile-profile-view"

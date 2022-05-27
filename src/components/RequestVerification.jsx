@@ -11,6 +11,7 @@ import {
   reqVerificationFormValues,
 } from "../modules/auth";
 import { getPropertyTypes, getRegions, alertOpen } from "../modules/common";
+import { getCivilEngg } from "../modules/civil-engg";
 import { Input } from "./FormComponents/Input";
 import { verifyProperty, contactMe } from "../modules/property-contact/Actions";
 import { FetchPropertyActionTypes } from "../modules/property-contact";
@@ -115,6 +116,10 @@ const ReqVerification = (props) => {
     validationSchema: requestSchema,
   });
 
+  const refreshCivilEngg = (val) => {
+    props.getCivilEngg({region:val.value});
+  };
+
   useEffect(() => {
     props.getPropertyTypes();
     props.getRegions();
@@ -193,6 +198,23 @@ const ReqVerification = (props) => {
           formik={formik}
           required={true}
           placeholder="Select..."
+          onChange={refreshCivilEngg}
+        />
+        <Select
+          label={"Civil Engineer"}
+          name={"civilEngineer"}
+          options={
+            props?.civilEngineers
+              ? props?.civilEngineers?.map((item) => ({
+                  label: item.displayName,
+                  value: item.id,
+                }))
+              : []
+          }
+          // defaultValue={formik?.values?.region}
+          formik={formik}
+          required={true}
+          placeholder="Select..."
         />
         <Input
           name="email"
@@ -252,6 +274,7 @@ const mapStateToProps = (state) => {
     reqForm: state?.propertyContact?.reqFormVals,
     property: state?.propertyContact?.property,
     contactMe: state?.propertyContact?.contactMe,
+    civilEngineers: state?.civilEng?.civilEngg?.array
   };
 };
 const mapDispatchToProps = (dispatch) => {
@@ -259,6 +282,7 @@ const mapDispatchToProps = (dispatch) => {
     {
       isLoggedInAction,
       getPropertyTypes,
+      getCivilEngg,
       getRegions,
       verifyPropertySubmit: (req) => verifyProperty(req),
       contactMeSubmit: (req) => contactMe(req),

@@ -77,7 +77,7 @@ class App extends Component {
             <Route exact path="/civilEnggProfile">
               <AuthComponentWrapper Child={CivilEnggProfile} />
             </Route>
-            <Route exact path="/civilEnggProfileEdit">
+            <Route path="/civilEnggProfileEdit/:id?">
               <AuthComponentWrapper Child={CivilEnggProfileEdit} />
             </Route>
             <Route exact path="/viewRequest/:id" component={ViewRequest} />

@@ -10,6 +10,7 @@ export const apis = {
   userAttachments: "/me/attachments",
   propertyTypes: "/masterdata/propertyTypes",
   regions: "/masterdata/regions",
+  civilEnggList: "/users/civilEnggList",
   // verifyProperty: "/property-contact/verify",
   // contactMe: "/property-contact/contact",
   verifyProperty: "/propertyRequests/verifyRequests",

@@ -4,6 +4,7 @@ import { sagaFunctions } from "../../utils/sagaActions";
 import {
   PropertyActionTypes,
   RegionActionTypes,
+  CivilEnggActionTypes,
   ContactUsActionTypes,
   QueryTypesActionTypes,
 } from "./ActionTypes";

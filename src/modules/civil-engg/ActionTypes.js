@@ -13,3 +13,5 @@ export const CEPropertyActionActionTypes = ActionTypesFactory(
   "PropertyAction"
 );
 export const InviteCEActionTypes = ActionTypesFactory("CE", "Invite");
+
+export const CivilEnggActionTypes = ActionTypesFactory("CE", "CivilEngg");

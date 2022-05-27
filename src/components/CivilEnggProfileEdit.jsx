@@ -4,8 +4,9 @@ import Camera from "../assets/images/camera.svg";
 import ProgressBar from "react-customizable-progressbar";
 import Docs from "../assets/images/doc-default.svg";
 import "./styles/civilEnggProfile.css";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { Input } from "./FormComponents/Input";
+import Select  from "./FormComponents/Select";
 import { TextArea } from "./FormComponents/TextArea";
 import { useFormik } from "formik";
 import { apis } from "../utils/apis";
@@ -18,6 +19,7 @@ import {
   getProfile,
   uploadProfilePicRequest,
 } from "../modules/auth";
+import { getRegions } from "../modules/common";
 import { bindActionCreators } from "redux";
 import { alertOpen } from "../modules/common";
 import moment from "moment";
@@ -52,9 +54,12 @@ const EditProfileSchema = Yup.object().shape({
 
 const CivilEnggProfileEdit = (props) => {
   const history = useHistory();
+  const params = useParams();
 
   const [showDate, setShowDate] = useState(false);
   const [errImgs, setErrImgs] = useState({});
+  const [region, setRegion] = useState("");
+  
 
   const formik = useFormik({
     initialValues: {
@@ -100,13 +105,19 @@ const CivilEnggProfileEdit = (props) => {
     onSubmit: (values) => {
       delete values.submitButton;
       values.dob = moment(values.dob).format("DD/MM/YYYY");
+      values.profileId = params.id;
+      values.region = [region];
       props.updateProfileRequest(values);
     },
   });
 
   const [imgLoading, setImgLoading] = useState({});
 
+
+
   useEffect(() => {
+    props.getProfile(params.id);
+    props.getRegions();
     return () => {
       props.updateProfileReset();
     };
@@ -116,7 +127,7 @@ const CivilEnggProfileEdit = (props) => {
   useEffect(() => {
     if (props.updateProfile && props.updateProfile.id) {
       props.updateProfileReset();
-      history.push("/civilEnggProfile");
+      history.push("/requests");
       props.alertOpen({
         msg: "User details updated successfully.",
         title: "User Profile Update",
@@ -139,15 +150,30 @@ const CivilEnggProfileEdit = (props) => {
         currentAddress: props?.userDetails?.currentAddress,
         permanentAddress: props?.userDetails?.permanentAddress,
         graduateFrom: props?.userDetails?.graduateFrom,
-        graduationYear: props?.userDetails?.graduationYear,
+        graduationYear: props?.userDetails?.graduationYear
       });
     }
     // eslint-disable-next-line
   }, [props.userDetails]);
 
+  useEffect(()=>{
+    const getSelectedRegion = ()=>{
+      const selectedID = props?.userDetails?.region ? props?.userDetails?.region[0]?._id : "";
+      const selectedRegionObj =  props?.regions?.array?.find((v)=>
+        v.id === selectedID
+      );
+      return selectedRegionObj ? {
+        label: selectedRegionObj.name,
+        value: selectedRegionObj.id,
+      } : undefined;
+    }
+    const selectedRegion = getSelectedRegion();
+    selectedRegion && formik?.setFieldValue("region", selectedRegion);
+  },[props?.regions, props.userDetails]);
+
   useEffect(() => {
     if (props.updateProfile && props.updateProfile.emailId) {
-      history.push("/civilEnggProfile");
+      history.push("/requests");
       props.alertOpen({
         msg: "Civil engineer details updated successfully.",
         title: "Civil engineer Profile Update",
@@ -341,6 +367,29 @@ const CivilEnggProfileEdit = (props) => {
                   label="Year of Pass"
                   formik={formik}
                   required={true}
+                />
+              </div>
+            </div>
+            <div className="profileSummary">
+              <div className="item1">
+                <Select
+                  label={"Region"}
+                  name={"region"}
+                  options={
+                    props?.regions?.array
+                      ? props?.regions?.array?.map((item) => ({
+                          label: item.name,
+                          value: item.id,
+                        }))
+                      : []
+                  }
+                  defaultValue={formik?.values?.region}
+                  formik={formik}
+                  required={true}
+                  placeholder="Select..."
+                  onChange={(e) => {
+                    setRegion(e.value);
+                  }}
                 />
               </div>
             </div>
@@ -615,6 +664,7 @@ const mapStateToProps = (state) => {
     userDetails: state?.auth?.userDetails?.user,
     profile: state?.auth?.profile,
     updateProfile: state?.auth?.updateProfile,
+    regions: state?.common?.regions,
   };
 };
 
@@ -626,6 +676,7 @@ const mapDispatchToProps = (dispatch) => {
       updateProfileReset,
       uploadProfilePicRequest,
       alertOpen,
+      getRegions
     },
     dispatch
   );

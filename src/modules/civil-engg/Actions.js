@@ -6,6 +6,7 @@ import {
   FetchCEActionTypes,
   CEPropertyActionActionTypes,
   SubmitAssessmentActionTypes,
+  CivilEnggActionTypes,
 } from "./ActionTypes";
 
 export const assignCERequest = (payload) => ({
@@ -46,4 +47,9 @@ export const fetchCE = () => ({
 export const CEPropertyAction = (payload) => ({
   type: CEPropertyActionActionTypes.REQUEST,
   payload,
+});
+
+export const getCivilEngg = (filters) => ({
+  type: CivilEnggActionTypes.REQUEST,
+  filters,
 });
